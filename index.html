@@ -25,11 +25,13 @@ a{color:inherit}
 header{background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;text-decoration:none}
+.logo img{height:44px;width:auto;display:block;border-radius:8px}
 .logo small{display:block;font-weight:500;font-size:.7rem;color:var(--muted)}
 nav{display:flex;gap:18px;flex-wrap:wrap}
 nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
 nav a:hover{color:var(--brand)}
-.hero{padding:56px 0 48px;text-align:center}
+.hero{padding:40px 0 48px;text-align:center}
+.hero-logo{display:block;margin:0 auto 22px;width:min(320px,80%);height:auto;border-radius:22px;box-shadow:0 8px 28px rgba(20,86,200,.25)}
 .hero h1{font-size:clamp(1.9rem,6vw,3rem);line-height:1.15;margin:0 0 14px}
 .hero h1 span{color:var(--brand)}
 .hero p{max-width:620px;margin:0 auto 26px;color:var(--muted);font-size:1.05rem}
@@ -54,6 +56,9 @@ h2{font-size:1.6rem;margin:0 0 6px;text-align:center}
 .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .contact .card{text-align:center}
 .contact a{color:var(--brand);font-weight:700;text-decoration:none;word-break:break-word}
+.price h3{margin:0 0 8px}
+.price .amount{font-size:1.6rem;font-weight:800;color:var(--brand);margin-bottom:10px}
+.price ul{margin:0;padding-left:18px;color:var(--muted);font-size:.95rem}
 footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
 </style>
 </head>
@@ -62,17 +67,12 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem;bord
 <header>
   <div class="wrap bar">
     <a class="logo" href="#accueil" aria-label="SecuriTech Sénégal">
-      <svg width="40" height="40" viewBox="0 0 48 48" role="img" aria-hidden="true">
-        <path d="M24 3 6 10v13c0 11 7.6 18.6 18 22 10.4-3.4 18-11 18-22V10z" fill="#1456c8"/>
-        <rect x="13" y="16" width="16" height="11" rx="2.5" fill="#fff"/>
-        <path d="M29 20l7-3v10l-7-3z" fill="#fff"/>
-        <circle cx="21" cy="21.5" r="2.6" fill="#1456c8"/>
-        <text x="24" y="39" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="9" fill="#fff">ST</text>
-      </svg>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAABgFBMVEX///////7+///+/f77+/v49/fz8/Pw8PDu7e7t7O3r6+zq6ern6Orm5efj4+Xh4OLe3+Lc3N7Z2dzV1dnPz9TJytDAwsq5u8Oytb+qrbdX2fw1w/ENyv0Nt/kAz/0AwfwAtvuCpbwFqfIBqfsBovgAq/wAovyUlZl0jJYDme4Ejc8BmfwBjfcAnP0AmP0AlPwAj/wAjPwAiPx7f4lxc3gudJwBfd8BcMwAgv4Aff4Af/wAgPMAd/0Ab/4Ac/sAceRbXWJOTlEFXJMdRV8BXrcBSI4AZP0AWvwAXNoAS/cASLkAOeQANqcbOVIANnUAL6UAI70BJWA1NTgsLC8SLTUZJi4gISUbGx4EICsGGiEAEIAADzQPFRsEDRwRERMEERIECREGCwsFBwoEBggDBQgEBAUBBAkBAhMBAwkAAggBAgYCAwQAAgQBAAUCAwMAAwMAAgMAAQMCAgICAQEBAQEAAgIAAQIAAQEBAAEAAAIAAAEDAAABAQABAAAAAQAAAAALIemRAAATdklEQVR42o1ZjUNZ7xe3b0WFikJ6Wb4ZlvJuSVNDSCrN1dDohiJUQqKxu+df/53zXIrW9vuetTFd5/Oc95dHQLg26RPXf+EGXgbpqVqttchvxL18F95wg7yIYPDBX+QPxD/drNK3rXpn4MMh5gPnGwDghs8/9Dj38sHjDSFd5lMwBe/fEuMPpxK85vXCnhtEeoTTs3uLC4tHAX+sSJ7FeM1ySK/IQfAfjkLaVbDT2afFpffvV7+fRMKB4Bl8etv6LzIIyBs6fMX+Hj47/bS09H6FApycHIXDERSjPWSNt00v+BNfjuM/eqwRktszAvcV4P9+FfkfHUXCoXA0Db+ut97yJ+5Fv4Kh//2mmxrqxr+6otFpEGAFJQD2QOHwzk4glh1UFffWYQX8f36+5QEtODw59a9q9HqdRkMR3m9Ejk6OKP/wfsjjCQfTHZSy80dFC36Pst67GrDP7xm1WvO6XqsDBBBg4ygWDbgCFGA/tLOz695yu6Ln+HTfq17HheBN5wXdwPNnQaPebLOaTSZA0KzovkTT5Qopnvo3v1ABdnY97m27zfo5gBb/+aKqvwGQAd2sma12u9VqMZv0Op0lELsm5evrbAmQo67Pu/v7IQDYgifMev1mMP2DcI1q8y8q6lMHwzQbNVosdvi2zWbbsOhNnyPpMpdFKpZKxTppgRh2z65nG56wWNb1uuVlI43xKrrFoAyvAdq38E/Kv2m2bW0DfzsysIJHPl1lr8t3d3f1cjGbL5XuCLnYc61b7NsIACrULC8uLHzauwDm94/cQJ4aBkCnvz8ObFi2tre3KNmtW+HYNXdVJnfn3xiGiWeA993VVbH0xMFBjCYL6LAPsDCz8Il6brXRC6PBQIOI5Q1rsrl77EEGTyR9x2WvScZrUEgnJ0TjsnknwxIEucTTgKX0JrNJq1teRASgVf9pAYKj8DAUB3B4SAi/4HHTlmcbWYMMdvuXYJrjStm7jEMumpBOSaVS8fjYu1G52hsHQcjNZaPLnUddFnACXoSFhcXFpSXjJ6ZA7m6aLzZo37dQqUa91Q3st/HHbbO6olnyVCxlO4xcMDYulk4hglQinhAKBEKlw8dSjC6oKugyaZaWUIbFxeVljWZp8V9nfMAG99Swa/otjwc4g4K2tywbgViF3IHP5AkjHRONIYkABQAmJyfGhSMCgVSNXAgpdLly2r+pAwTKXqfVapYWFv6NNx94gA5msw9m964badvjtps3/SmOq5TK5XLxLjE3LZ8SA8To6CiATIjFACASiYSjAsGYghek0e1exwIby0tLyF6Hmev9gpdUKUC7vbeqBafeRvYej9tmRt2QSrlSqZRLxSv11KxMNjMtHRcCxMgIgAjHJ8bHRUIgwBBMqb0JFKTbTUcDVp1OS1PX+/cLPh7gZ5MY9Tu7PHeP27Lmh4DhKrfg9JVyOU+8E7NyuUw2PT0lnRSNAcLIu5HRUaGIQqDi3gkEonleWd1S+iRs1+u0wH9lca8vATFqLaB+z+6u3WSMQqw0b+pPdQpQqmSUs7N9hClwIiFiCN6hJIiBIvA0a2DyiHGdPvmiw+qxNABgsloBwW4JHIO9aw3y9PRUB4RKpdjxSWXyZwSpWIwQVA6BAAQRTKoMBofDYTCo58RCmdqXI+Cc6Q8rkN6XjtF7AKBFjGbICltUNwRyCfeEALwE5bxTPSueBgi0A8owCQamYoyMCkTORIH86AVqIck4DSqGFB/S6xowxQoA0Eh+JEbrNuRdF+FaNT6rd/oSlOpx9UfHx/lp8QxATIMQErEYfAilGBPI4ySfSQDFkyybo6EbVyeb3bRFp9frV05JjUpQI0b7LpjX1UvoHErQrP9AhCvinZpTgRIMcxLQFVUTFUI4JhyRJbKJTK7evMll2GQymclVL3PE6SPdtFVvMpk1KTg7D+Df2tnddbswIsClGxigN7wEV8QpV8zNKdQfnR/nZyanwBJUTRMi0ZiQySXYOuMs+Lykns/lc5n809UPR7zTjdnMFrPlGeAWALD8hesIADZqNinEHZXAMasAhLk5pcHhNCgmJ6YBAtPFxJiXjeeccZ/j0ulMOnMtNseyT6WM46rCxbasNqtttQ9wQ/zu/VBoJ1wCgAaJz8OJDQzkSwAoEYdChQjgqyiGQy0bF8tkoKcRJ4mzLCikUGCfGEeczWRY9qrs9ZErEsNKsrV2Rh4fO7wE7n0ogOFr0mk2WRn16lF1slO5uwMbqNQqpWKOBsNsXwyJZNRAGNY3y5JkPJ5Msjm17zKZTNQyhlylxH2n6WztopfsbknQcwAIB+ekVSVeAU1rkyOqS1BSBQRSq+d5CLl8Rq6YB6cyKBTOy7iPJJyFOJM8v84nQFvgpT6CApS4E0wJ7rVcNnV6QY285zlAAoACMYyMTQqF41L5HDwLCB2nQv0MAaEwLVeqmUKOVL1xh4MkmL1gOn3OZrzqQs7rYx1XxXIRAHahHzA+tnIpHuCYB0hTAIFwCoqLRAm+UQBPqje88y8QEG5T0zKGZfMJb2ZeXWWO11zpdDrLeh0N1sE44x1I8NzRDpDHSDpcl3fT053Dg4NDAKgjwNiMWDIzo3A4AQCJsF618llRcrlYxcYTrM9XTeRziVjUmD5PF9lMrhE3MMxdsVwq/YhQgABpNVttmipSu4dABzGopAggm5oZl87NOBpX9acfTwBKWJ96TtWDmJMYWAheL+uVsbkE6OcaJVAZiNdBylmoIJUytK07IbcfA5nPRWdfBgGEctm4RKVSOMlDo1BoNJvNAvkW96oVPSlmnGwiyXjzPsMlmzxPn8eC6SQLdcfg+wkNTbl8dx32AMKWn9ySXja9+HKAANEewOz0qNohkxgSOZo6HgqEkaiZZF9Rcu9lMsP42AKTzANAOhhMxqHRYNSZMhigXHo6D0FLtmuN9gGgJrvAAocHQd4GolmJ0DkjGBGMyecd3jhUxLh8bFLlOP7mVc0ChNJXz7BMnE2MOkkyAwr6FmfnfE2ngUDbVy6XuPSO2+PeNR+TWm+EapEA9aIIBfhnfHZKCG3KuGhsBCNuWqWeHJNKppUfncc57zxA+JpsLp5IJr2JfIHFbOrzAZyB+ZFHgCIXc0Ny9phO+zbAbLdPAR6fAGBUPDcNABOT41jZaWkXToqnJtQf1T4YdrxquYFUrhIAQLzyJMmzyRuwMOM1tPJFVBEA2KGtcn9Iwck7mCpAVdEQAoTzhAIoZCKHXCzhm4fx8YmJCfGUdPbfeQepQg0s+JTe8zs2kUnmvfMJlZORxZMJhgH0fImXIGjFnhMyRZtPdgAQC2GuCJ1TAKlSLnIqpjDzSySII5ZIJ6YhI7GdBulUOYBgMP9kkixh531xA5tkGK8azo8ClIskYMGe2XjfvCG3WQSok9TOPgKkEWBsSjkrdc6JIfHznZwE/srVKpmPNJ7nfWDJJJIZNp/P53KJeIJRMfVsqQhRUC79cAHAZ7OxxnVTxlMEaJOzXQTYiUGqNQhnlLMzTue/BswPPKkwo9Iuh7aDbQRKOqHaO70gDJBX5QUXogKU7rKbVrtZv7ZHLvxaTYoHKH4JIUCQXBLHpEwpVxji37xehhJ8H19y5GFg/sKaxEKNxyPAQdQMAQ8q0U6QpPR6rXHvshhdg8pMAQAhENqHP5FugTglMgXkfadX7RweTRrY7refeuuCZrPBf8wm4kyCgH5KFKBUbEdXoe/MRje1pvX1HgCUHA/UtFC42CBeiXwOIvbjv2pntdAAqlYLhcvLQqFaxXdAN9VCkzcGvK93oMzeoYOi+stg6KeLS5IKbJjMZvP6uqkPEHUD/9DOWZcwSrUSftRqg5Mqvdp4a0yEJPvj6ekHdB7QnFHuMLoVixWQLXsa3DSbcfDB2YoCcI8ktQ3sQ54YaeahT5tVKCGrYXP88BN17XtF3jiaon5bodwple9wYVBMRQNrJpPFtmGl0+lmNNuzQXaTpvAgVyDxjw61ZHZuai7ZfIDT+9RiwWuSfzuJpYvDy4NsKhYMGLU6rckC3HG4hSa92B+hIBt5aI1oggsyBsO8Sm2IE7Bjcl5Ae9Ahmvp2Ark3HPAHo7HY8fFx1O83GldXoKHW6D6Y1kE7NosZpvM64Wq9EQrqvh06o53dM6hC5CFX5V2xmZQLcCQYotER3/fDyEFoZwsncH7HQGkFOl6dHsZOi9nW2y+0+/siqJrWHejf3bHOLR+vD9VGs1FQCsYElOc7HAsE797BaCBwxg4jh/s7HhhxwYq4ZdDQTQ8A4PBhsriCqVqX1Pg+V0Cn8jbJbeKAAFWojmdHb4e04RXQ4z/r/p9//hkRGNLA/yC0uw381029PQkPACJ8AO4VtHeLG5r0ayRAG+AvRdLfcnKNpnKEDgIiJzNAudjR4X4ItxQb1vVBCd6vGP2xM+DNcflYDOw6OOnfkmMz9ErurVin1gN4IMlxlGBU4B0KgQeuAmU44PqM+jHxIrxfWTX691L3qI4urmO0fLXpAVAdXazhhGkPUB3R1EDivNOMxAu5yxeCPqALs3HlPBWLwtwOImiMp2f3lE/t9ga4g5O62u3O8DLkkQSs2FB+Pu/rCADojCcUOH6P5MrNEwcoDYgq/QeNHxnc3j+2a+3UutW+9dnMdxSDAPfkWIv7A1u0/6smyU2PCumsCnPYIDl9SejJi2fFq4s187ppXeev3fKnqnF+y2eoNh9o5z4EAH60Bi33ln2z0u4t4BrQYUxiWR4ffR3Kk5if/avGlBEnDb2/p/D20/mGzQbVwPir9Xrzy90Tv34bwK2xvnkazcSMSDIJJEaC14kJ3CLAX6FgDDpX1zICWF4AIF71G1aLTbf3rKGXdQ4kPI3darNZXK0WXVmBholvUsivQCQ9CERBIPE4+NYFSGCyWKymnsbbzewaAppXL56dfWBfBMOm1oZJkIrA8XZm5idF0FZAB4PDK5JILKUCiWQsiZ4aTetmqznIS1ADASyQS8Ho92+s1O7J6QqkQIvZdUtXlBw1wy3jgG6xT0qgaSFtBaZHve2z1BpEgsUSpD1cq3UBTmXSm5bPOo+vAOh5H38Zdesms8UUfdEgzUs3V1cFvpbdFAr5hFo0Aw3HtNBAuherWj3IwEsAdVG/rtd+WPrEtwe/LQWr5HgJ8M2WzWy7twKFygtxNXhvwVVJYgrG5Rm5xEAaAKDV9wDAiB9wt6ZbPGs/vgEAGaTBfVr+oDdbLYGeCG1+PclRev4KI4U5ByqSgTxcrEL+NJnQi55qjy7TOqRvKsDLZcfg1rFBThfgeQhFtDPHQWycDRPM8wmfQgoj55xC6gQVLS9rtR8oANR1/YZJr9MsZJqNgfWsYPD+pko+LZow1r+cQyC3Hy+NuDXRrPYI136KqUkZslcoZxMUYFn7AeOgBgqCOqbV8nuuofX+CzUb7ILWYoXmOHJX70DovQf2Oh1uNtA9EGBmFqZ+hVKpmnXCBI8AOgS4beWMWCj1S4u31fZgtR5ezIKdFzds9q1t9wl3RU6RPyJgnVpfX19eXpD02KsUH3ONGrlYBARUUYULmO02q0W/eEoaQ+vrV6tlUNLytn3L7fFEuxVeQSgAVHIotZbFGZ67Sqly5rF9vFhcAgCtv9mleca6seQfdNFX11z8Wv/KaNpGgJ20/6WUQy2HRm1hao5qf56uMx+wiCCAxnhGojrMY3adkVQ7Q1dsrwHQm5fsdD0Ycvn7FOTJSwnnJWCPWxkKsOTKkj09pHr7lmX1ov36akrw+nIICsOKh24Iw2kY1N8m3Ck98RIsBYpkT+ehy27NKVcjvwG8pnuyp4H6D33Yfqx7e3t/+0zVHjWavAIogJ9wyB8JszT39wsKjkfw66AJ2wmF9qOEL9Fv31IBAPCHDLTrwYWx9qVO/p8rFkDQhhAgtH9y3X3rTvEZ4JjkjKYdXN549MP8hyTgfr26ZIFTYTsPU08kjZ3rG1dVfIkkKaMtRE2G+aJDuJ9/UtHQzREimHDmgfH5MFYmrc7QDSHXuwuDA++tekK7YLFd6CMe24O3ZH+9hUKEPRMKAMNz+AiF+F1P4C9nxnW8TdvZfeb/tg3eMuEtOV3bOdgH/pFIJHY9CEEP+dgi93v4RAgXltYo7aT/GwDH3yHdkjOX54AHiBzhTdyAtfEm7Ni4ewDjO5jK8zlG+MaI+08ScP20dO/fOjhEgKOjo5N0mfROide/5DSwCUMI3Q94XKme/3C/ucEbN+ID94GExDZDkR7A0RFeYNVbeBP269jo+vr1EPcbwN9ffMv//27kZ1OfBz4j+yO8RY5EoueQO7iLPaPr6PtXXGEBwJfYgB9z/x9g+EofThtzheH4J5Qi4eDpqd8VOPn+/etXuoXbPzon9fbfrt1/Axg+BCTHbPBL5KRPRy4XcH/mH44RUiN/OiPH/U1F3Iu7pwIDEMj++8lXNMEhjKkwM76dqbjn5pf7s/56NQh9Jnw0AED5H+IgWf/z9wZKJvemlvCFzywtGOhigXDkGaDHnqsUcIXR/BPAT264dfyLHGjHWIRCIP/Dr3jRVq8O9pdDR/z53MzxKvoD/0GD19scSQcBAo5/wsc19N5er8OhduSavBCdIfo/uegNKVqkexYFF01jIm1ibz+G04462Wz+hcebAG89DWK3oEkvwuGb9Q7HPTRZuUA4JnRif0G7hVOjyzhAKVJDwf4H3Z5KQMLsv38AAAAASUVORK5CYII=" alt="Logo SecuriTech" width="44" height="44">
       <span>SecuriTech Sénégal<small>Votre sécurité, notre priorité</small></span>
     </a>
     <nav>
       <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
       <a href="#pourquoi">Pourquoi nous</a>
       <a href="#boutique">Boutique</a>
       <a href="#contact">Contact</a>
@@ -82,6 +82,7 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem;bord
 
 <main id="accueil">
   <div class="wrap hero">
+    <img class="hero-logo" src="Logo.png" alt="SecuriTech – Votre sécurité, notre priorité" width="320" height="320">
     <h1>Protégez votre maison et votre entreprise avec <span>SecuriTech</span></h1>
     <p>Installation de caméras de surveillance, vidéophones, interphones et réseaux informatiques au Sénégal. Un technicien qualifié, du conseil jusqu’à la mise en service.</p>
     <div class="btns">
@@ -102,6 +103,33 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem;bord
         <div class="card"><div class="ic">📡</div><h3>Points d’accès WiFi</h3><p>Configuration de bornes WiFi pour une couverture stable dans toute votre maison ou entreprise.</p></div>
         <div class="card"><div class="ic">🛠️</div><h3>Maintenance et dépannage</h3><p>Vérification, réglage et réparation de vos installations existantes.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="wrap">
+      <h2>Nos tarifs</h2>
+      <p class="sub">Prix indicatifs en FCFA. Devis gratuit adapté à votre besoin.</p>
+      <div class="grid">
+        <div class="card price">
+          <h3>Kit 8 caméras Fosvision</h3>
+          <div class="amount">190 000 FCFA</div>
+          <ul>
+            <li>Kit de 8 caméras : 140 000 FCFA</li>
+            <li>Installation et configuration : 50 000 FCFA</li>
+          </ul>
+        </div>
+        <div class="card price">
+          <h3>Autres installations</h3>
+          <div class="amount">Sur devis</div>
+          <ul>
+            <li>Caméras WiFi</li>
+            <li>Vidéophones et interphones</li>
+            <li>Câblage réseau et points d’accès</li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:24px"><a class="btn wa" href="https://wa.me/221763259221?text=Bonjour%20SecuriTech%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">Demander un devis</a></p>
     </div>
   </section>
 
