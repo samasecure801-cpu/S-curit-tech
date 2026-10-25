@@ -4,75 +4,106 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SecuriTech Sénégal – Vidéosurveillance, interphonie et réseaux</title>
-<meta name="description" content="Installation de caméras de surveillance, vidéophones, interphones et câblage réseau au Sénégal.">
+<meta name="description" content="Installation de caméras de surveillance, vidéophones, interphones et câblage réseau à Dakar et partout au Sénégal. Devis gratuit sur WhatsApp.">
+<meta property="og:title" content="SecuriTech Sénégal – Caméras, interphones et réseaux">
+<meta property="og:description" content="Un technicien réseau qualifié conseille, installe et configure. Devis gratuit sur WhatsApp.">
+<meta property="og:image" content="https://samasecure801-cpu.github.io/S-curit-tech/Logo.png">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"SecuriTech Sénégal","description":"Installation de caméras de surveillance, vidéophones, interphones, câblage réseau et WiFi.","telephone":"+221763259221","areaServed":["Dakar","Thiès","Mbour","Sénégal"],"url":"https://samasecure801-cpu.github.io/S-curit-tech/","image":"https://samasecure801-cpu.github.io/S-curit-tech/Logo.png"}
+</script>
 <style>
 :root{
-  --bg:#f6f8fc;--surface:#ffffff;--text:#0f1b2d;--muted:#52627a;
-  --brand:#1456c8;--brand-dark:#0c3c91;--accent:#25d366;--border:#dbe3ef;
+  --ink:#10222f; --ink-2:#2c4252; --paper:#f5f7f8; --white:#fff;
+  --line:#d8e0e5; --accent:#f2b705; --accent-ink:#2a2000; --wa:#1a8f4c;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#0b1220;--surface:#131d30;--text:#e8eefb;--muted:#9fb0cb;--brand:#4c8dff;--brand-dark:#2f6fe0;--border:#24324b}
-}
-:root[data-theme="dark"]{--bg:#0b1220;--surface:#131d30;--text:#e8eefb;--muted:#9fb0cb;--brand:#4c8dff;--brand-dark:#2f6fe0;--border:#24324b}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;height:auto}
 a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{background:var(--surface);border-bottom:1px solid var(--border)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;text-decoration:none}
-.logo img{height:44px;width:auto;display:block;border-radius:8px}
-.logo small{display:block;font-weight:500;font-size:.7rem;color:var(--muted)}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
-nav a:hover{color:var(--brand)}
-.hero{padding:40px 0 48px;text-align:center}
-.hero-logo{display:block;margin:0 auto 22px;width:min(320px,80%);height:auto;border-radius:22px;box-shadow:0 8px 28px rgba(20,86,200,.25)}
-.hero h1{font-size:clamp(1.9rem,6vw,3rem);line-height:1.15;margin:0 0 14px}
-.hero h1 span{color:var(--brand)}
-.hero p{max-width:620px;margin:0 auto 26px;color:var(--muted);font-size:1.05rem}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid var(--brand);background:var(--brand);color:#fff}
-.btn:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
-.btn.alt{background:transparent;color:var(--brand)}
-.btn.alt:hover{background:var(--brand);color:#fff}
-.btn.wa{background:var(--accent);border-color:var(--accent);color:#06210f}
-section{padding:44px 0}
-h2{font-size:1.6rem;margin:0 0 6px;text-align:center}
-.sub{text-align:center;color:var(--muted);margin:0 0 28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px}
-.card .ic{font-size:1.8rem;margin-bottom:8px}
-.card h3{margin:0 0 6px;font-size:1.1rem}
-.card p{margin:0;color:var(--muted);font-size:.95rem}
-.why{background:var(--surface);border-block:1px solid var(--border)}
-.cta{text-align:center;background:var(--brand);color:#fff;border-radius:20px;padding:36px 20px}
-.cta p{margin:0 auto 20px;max-width:520px;opacity:.92}
-.cta .btn{background:#fff;color:var(--brand-dark);border-color:#fff}
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.contact .card{text-align:center}
-.contact a{color:var(--brand);font-weight:700;text-decoration:none;word-break:break-word}
-.price h3{margin:0 0 8px}
-.price .amount{font-size:1.6rem;font-weight:800;color:var(--brand);margin-bottom:10px}
-.price ul{margin:0;padding-left:18px;color:var(--muted);font-size:.95rem}
-footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+
+header{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--white)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
+.brand img{width:36px;height:36px;border-radius:6px;object-fit:cover}
+.brand small{display:block;font-weight:400;font-size:12px;opacity:.75}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
+nav a{text-decoration:none;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline}
+@media(max-width:720px){nav{display:none}}
+
+.hero{background:var(--ink);color:var(--white);padding:56px 0 64px;border-bottom:6px solid var(--accent)}
+.hero .wrap{display:grid;gap:32px;align-items:center}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.3fr .7fr}}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 16px;max-width:20ch}
+.hero p{font-size:19px;max-width:46ch;margin:0 0 28px;color:#d6e0e6}
+.hero img{border-radius:12px;max-height:280px;margin:0 auto;display:block}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 22px;border-radius:8px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#15733d}
+.btn-ghost{border-color:#7f95a3;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+section{padding:56px 0}
+section.alt{background:var(--white);border-block:1px solid var(--line)}
+h2{font-size:clamp(24px,3.5vw,32px);margin:0 0 8px;line-height:1.2}
+.lead{color:var(--ink-2);margin:0 0 32px;max-width:60ch}
+
+.services{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));border-top:1px solid var(--line)}
+.service{padding:22px 4px 22px 0;border-bottom:1px solid var(--line);display:flex;gap:14px}
+.service .ico{font-size:28px;line-height:1.2}
+.service h3{margin:0 0 4px;font-size:18px}
+.service p{margin:0;color:var(--ink-2);font-size:16px}
+
+.price{background:var(--white);border:2px solid var(--ink);border-radius:12px;padding:28px;max-width:440px}
+.price h3{margin:0 0 4px}
+.price .amount{font-size:36px;font-weight:800;margin:0 0 12px}
+.price ul,.plain{padding-left:20px;margin:0 0 20px}
+.pricing{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.price.soft{border:1px solid var(--line);background:transparent}
+
+.why{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.why h3{margin:0 0 6px;font-size:18px}
+.why p{margin:0;color:var(--ink-2)}
+
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.steps li{counter-increment:s;padding-left:46px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:800;display:grid;place-items:center}
+.steps strong{display:block}
+.steps span{color:var(--ink-2);font-size:16px}
+
+.zones li{margin-bottom:8px}
+.note{color:var(--ink-2);font-size:16px}
+
+.contact{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.contact h3{margin:0 0 4px;font-size:17px}
+.contact p{margin:0}
+
+footer{background:var(--ink);color:#b8c6cf;padding:28px 0;font-size:15px;text-align:center}
+
+.float-wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap bar">
-    <a class="logo" href="#accueil" aria-label="SecuriTech Sénégal">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAABgFBMVEX///////7+///+/f77+/v49/fz8/Pw8PDu7e7t7O3r6+zq6ern6Orm5efj4+Xh4OLe3+Lc3N7Z2dzV1dnPz9TJytDAwsq5u8Oytb+qrbdX2fw1w/ENyv0Nt/kAz/0AwfwAtvuCpbwFqfIBqfsBovgAq/wAovyUlZl0jJYDme4Ejc8BmfwBjfcAnP0AmP0AlPwAj/wAjPwAiPx7f4lxc3gudJwBfd8BcMwAgv4Aff4Af/wAgPMAd/0Ab/4Ac/sAceRbXWJOTlEFXJMdRV8BXrcBSI4AZP0AWvwAXNoAS/cASLkAOeQANqcbOVIANnUAL6UAI70BJWA1NTgsLC8SLTUZJi4gISUbGx4EICsGGiEAEIAADzQPFRsEDRwRERMEERIECREGCwsFBwoEBggDBQgEBAUBBAkBAhMBAwkAAggBAgYCAwQAAgQBAAUCAwMAAwMAAgMAAQMCAgICAQEBAQEAAgIAAQIAAQEBAAEAAAIAAAEDAAABAQABAAAAAQAAAAALIemRAAATdklEQVR42o1ZjUNZ7xe3b0WFikJ6Wb4ZlvJuSVNDSCrN1dDohiJUQqKxu+df/53zXIrW9vuetTFd5/Oc95dHQLg26RPXf+EGXgbpqVqttchvxL18F95wg7yIYPDBX+QPxD/drNK3rXpn4MMh5gPnGwDghs8/9Dj38sHjDSFd5lMwBe/fEuMPpxK85vXCnhtEeoTTs3uLC4tHAX+sSJ7FeM1ySK/IQfAfjkLaVbDT2afFpffvV7+fRMKB4Bl8etv6LzIIyBs6fMX+Hj47/bS09H6FApycHIXDERSjPWSNt00v+BNfjuM/eqwRktszAvcV4P9+FfkfHUXCoXA0Db+ut97yJ+5Fv4Kh//2mmxrqxr+6otFpEGAFJQD2QOHwzk4glh1UFffWYQX8f36+5QEtODw59a9q9HqdRkMR3m9Ejk6OKP/wfsjjCQfTHZSy80dFC36Pst67GrDP7xm1WvO6XqsDBBBg4ygWDbgCFGA/tLOz695yu6Ln+HTfq17HheBN5wXdwPNnQaPebLOaTSZA0KzovkTT5Qopnvo3v1ABdnY97m27zfo5gBb/+aKqvwGQAd2sma12u9VqMZv0Op0lELsm5evrbAmQo67Pu/v7IQDYgifMev1mMP2DcI1q8y8q6lMHwzQbNVosdvi2zWbbsOhNnyPpMpdFKpZKxTppgRh2z65nG56wWNb1uuVlI43xKrrFoAyvAdq38E/Kv2m2bW0DfzsysIJHPl1lr8t3d3f1cjGbL5XuCLnYc61b7NsIACrULC8uLHzauwDm94/cQJ4aBkCnvz8ObFi2tre3KNmtW+HYNXdVJnfn3xiGiWeA993VVbH0xMFBjCYL6LAPsDCz8Il6brXRC6PBQIOI5Q1rsrl77EEGTyR9x2WvScZrUEgnJ0TjsnknwxIEucTTgKX0JrNJq1teRASgVf9pAYKj8DAUB3B4SAi/4HHTlmcbWYMMdvuXYJrjStm7jEMumpBOSaVS8fjYu1G52hsHQcjNZaPLnUddFnACXoSFhcXFpSXjJ6ZA7m6aLzZo37dQqUa91Q3st/HHbbO6olnyVCxlO4xcMDYulk4hglQinhAKBEKlw8dSjC6oKugyaZaWUIbFxeVljWZp8V9nfMAG99Swa/otjwc4g4K2tywbgViF3IHP5AkjHRONIYkABQAmJyfGhSMCgVSNXAgpdLly2r+pAwTKXqfVapYWFv6NNx94gA5msw9m964badvjtps3/SmOq5TK5XLxLjE3LZ8SA8To6CiATIjFACASiYSjAsGYghek0e1exwIby0tLyF6Hmev9gpdUKUC7vbeqBafeRvYej9tmRt2QSrlSqZRLxSv11KxMNjMtHRcCxMgIgAjHJ8bHRUIgwBBMqb0JFKTbTUcDVp1OS1PX+/cLPh7gZ5MY9Tu7PHeP27Lmh4DhKrfg9JVyOU+8E7NyuUw2PT0lnRSNAcLIu5HRUaGIQqDi3gkEonleWd1S+iRs1+u0wH9lca8vATFqLaB+z+6u3WSMQqw0b+pPdQpQqmSUs7N9hClwIiFiCN6hJIiBIvA0a2DyiHGdPvmiw+qxNABgsloBwW4JHIO9aw3y9PRUB4RKpdjxSWXyZwSpWIwQVA6BAAQRTKoMBofDYTCo58RCmdqXI+Cc6Q8rkN6XjtF7AKBFjGbICltUNwRyCfeEALwE5bxTPSueBgi0A8owCQamYoyMCkTORIH86AVqIck4DSqGFB/S6xowxQoA0Eh+JEbrNuRdF+FaNT6rd/oSlOpx9UfHx/lp8QxATIMQErEYfAilGBPI4ySfSQDFkyybo6EbVyeb3bRFp9frV05JjUpQI0b7LpjX1UvoHErQrP9AhCvinZpTgRIMcxLQFVUTFUI4JhyRJbKJTK7evMll2GQymclVL3PE6SPdtFVvMpk1KTg7D+Df2tnddbswIsClGxigN7wEV8QpV8zNKdQfnR/nZyanwBJUTRMi0ZiQySXYOuMs+Lykns/lc5n809UPR7zTjdnMFrPlGeAWALD8hesIADZqNinEHZXAMasAhLk5pcHhNCgmJ6YBAtPFxJiXjeeccZ/j0ulMOnMtNseyT6WM46rCxbasNqtttQ9wQ/zu/VBoJ1wCgAaJz8OJDQzkSwAoEYdChQjgqyiGQy0bF8tkoKcRJ4mzLCikUGCfGEeczWRY9qrs9ZErEsNKsrV2Rh4fO7wE7n0ogOFr0mk2WRn16lF1slO5uwMbqNQqpWKOBsNsXwyJZNRAGNY3y5JkPJ5Msjm17zKZTNQyhlylxH2n6WztopfsbknQcwAIB+ekVSVeAU1rkyOqS1BSBQRSq+d5CLl8Rq6YB6cyKBTOy7iPJJyFOJM8v84nQFvgpT6CApS4E0wJ7rVcNnV6QY285zlAAoACMYyMTQqF41L5HDwLCB2nQv0MAaEwLVeqmUKOVL1xh4MkmL1gOn3OZrzqQs7rYx1XxXIRAHahHzA+tnIpHuCYB0hTAIFwCoqLRAm+UQBPqje88y8QEG5T0zKGZfMJb2ZeXWWO11zpdDrLeh0N1sE44x1I8NzRDpDHSDpcl3fT053Dg4NDAKgjwNiMWDIzo3A4AQCJsF618llRcrlYxcYTrM9XTeRziVjUmD5PF9lMrhE3MMxdsVwq/YhQgABpNVttmipSu4dABzGopAggm5oZl87NOBpX9acfTwBKWJ96TtWDmJMYWAheL+uVsbkE6OcaJVAZiNdBylmoIJUytK07IbcfA5nPRWdfBgGEctm4RKVSOMlDo1BoNJvNAvkW96oVPSlmnGwiyXjzPsMlmzxPn8eC6SQLdcfg+wkNTbl8dx32AMKWn9ySXja9+HKAANEewOz0qNohkxgSOZo6HgqEkaiZZF9Rcu9lMsP42AKTzANAOhhMxqHRYNSZMhigXHo6D0FLtmuN9gGgJrvAAocHQd4GolmJ0DkjGBGMyecd3jhUxLh8bFLlOP7mVc0ChNJXz7BMnE2MOkkyAwr6FmfnfE2ngUDbVy6XuPSO2+PeNR+TWm+EapEA9aIIBfhnfHZKCG3KuGhsBCNuWqWeHJNKppUfncc57zxA+JpsLp5IJr2JfIHFbOrzAZyB+ZFHgCIXc0Ny9phO+zbAbLdPAR6fAGBUPDcNABOT41jZaWkXToqnJtQf1T4YdrxquYFUrhIAQLzyJMmzyRuwMOM1tPJFVBEA2KGtcn9Iwck7mCpAVdEQAoTzhAIoZCKHXCzhm4fx8YmJCfGUdPbfeQepQg0s+JTe8zs2kUnmvfMJlZORxZMJhgH0fImXIGjFnhMyRZtPdgAQC2GuCJ1TAKlSLnIqpjDzSySII5ZIJ6YhI7GdBulUOYBgMP9kkixh531xA5tkGK8azo8ClIskYMGe2XjfvCG3WQSok9TOPgKkEWBsSjkrdc6JIfHznZwE/srVKpmPNJ7nfWDJJJIZNp/P53KJeIJRMfVsqQhRUC79cAHAZ7OxxnVTxlMEaJOzXQTYiUGqNQhnlLMzTue/BswPPKkwo9Iuh7aDbQRKOqHaO70gDJBX5QUXogKU7rKbVrtZv7ZHLvxaTYoHKH4JIUCQXBLHpEwpVxji37xehhJ8H19y5GFg/sKaxEKNxyPAQdQMAQ8q0U6QpPR6rXHvshhdg8pMAQAhENqHP5FugTglMgXkfadX7RweTRrY7refeuuCZrPBf8wm4kyCgH5KFKBUbEdXoe/MRje1pvX1HgCUHA/UtFC42CBeiXwOIvbjv2pntdAAqlYLhcvLQqFaxXdAN9VCkzcGvK93oMzeoYOi+stg6KeLS5IKbJjMZvP6uqkPEHUD/9DOWZcwSrUSftRqg5Mqvdp4a0yEJPvj6ekHdB7QnFHuMLoVixWQLXsa3DSbcfDB2YoCcI8ktQ3sQ54YaeahT5tVKCGrYXP88BN17XtF3jiaon5bodwple9wYVBMRQNrJpPFtmGl0+lmNNuzQXaTpvAgVyDxjw61ZHZuai7ZfIDT+9RiwWuSfzuJpYvDy4NsKhYMGLU6rckC3HG4hSa92B+hIBt5aI1oggsyBsO8Sm2IE7Bjcl5Ae9Ahmvp2Ark3HPAHo7HY8fFx1O83GldXoKHW6D6Y1kE7NosZpvM64Wq9EQrqvh06o53dM6hC5CFX5V2xmZQLcCQYotER3/fDyEFoZwsncH7HQGkFOl6dHsZOi9nW2y+0+/siqJrWHejf3bHOLR+vD9VGs1FQCsYElOc7HAsE797BaCBwxg4jh/s7HhhxwYq4ZdDQTQ8A4PBhsriCqVqX1Pg+V0Cn8jbJbeKAAFWojmdHb4e04RXQ4z/r/p9//hkRGNLA/yC0uw381029PQkPACJ8AO4VtHeLG5r0ayRAG+AvRdLfcnKNpnKEDgIiJzNAudjR4X4ItxQb1vVBCd6vGP2xM+DNcflYDOw6OOnfkmMz9ErurVin1gN4IMlxlGBU4B0KgQeuAmU44PqM+jHxIrxfWTX691L3qI4urmO0fLXpAVAdXazhhGkPUB3R1EDivNOMxAu5yxeCPqALs3HlPBWLwtwOImiMp2f3lE/t9ga4g5O62u3O8DLkkQSs2FB+Pu/rCADojCcUOH6P5MrNEwcoDYgq/QeNHxnc3j+2a+3UutW+9dnMdxSDAPfkWIv7A1u0/6smyU2PCumsCnPYIDl9SejJi2fFq4s187ppXeev3fKnqnF+y2eoNh9o5z4EAH60Bi33ln2z0u4t4BrQYUxiWR4ffR3Kk5if/avGlBEnDb2/p/D20/mGzQbVwPir9Xrzy90Tv34bwK2xvnkazcSMSDIJJEaC14kJ3CLAX6FgDDpX1zICWF4AIF71G1aLTbf3rKGXdQ4kPI3darNZXK0WXVmBholvUsivQCQ9CERBIPE4+NYFSGCyWKymnsbbzewaAppXL56dfWBfBMOm1oZJkIrA8XZm5idF0FZAB4PDK5JILKUCiWQsiZ4aTetmqznIS1ADASyQS8Ho92+s1O7J6QqkQIvZdUtXlBw1wy3jgG6xT0qgaSFtBaZHve2z1BpEgsUSpD1cq3UBTmXSm5bPOo+vAOh5H38Zdesms8UUfdEgzUs3V1cFvpbdFAr5hFo0Aw3HtNBAuherWj3IwEsAdVG/rtd+WPrEtwe/LQWr5HgJ8M2WzWy7twKFygtxNXhvwVVJYgrG5Rm5xEAaAKDV9wDAiB9wt6ZbPGs/vgEAGaTBfVr+oDdbLYGeCG1+PclRev4KI4U5ByqSgTxcrEL+NJnQi55qjy7TOqRvKsDLZcfg1rFBThfgeQhFtDPHQWycDRPM8wmfQgoj55xC6gQVLS9rtR8oANR1/YZJr9MsZJqNgfWsYPD+pko+LZow1r+cQyC3Hy+NuDXRrPYI136KqUkZslcoZxMUYFn7AeOgBgqCOqbV8nuuofX+CzUb7ILWYoXmOHJX70DovQf2Oh1uNtA9EGBmFqZ+hVKpmnXCBI8AOgS4beWMWCj1S4u31fZgtR5ezIKdFzds9q1t9wl3RU6RPyJgnVpfX19eXpD02KsUH3ONGrlYBARUUYULmO02q0W/eEoaQ+vrV6tlUNLytn3L7fFEuxVeQSgAVHIotZbFGZ67Sqly5rF9vFhcAgCtv9mleca6seQfdNFX11z8Wv/KaNpGgJ20/6WUQy2HRm1hao5qf56uMx+wiCCAxnhGojrMY3adkVQ7Q1dsrwHQm5fsdD0Ycvn7FOTJSwnnJWCPWxkKsOTKkj09pHr7lmX1ov36akrw+nIICsOKh24Iw2kY1N8m3Ck98RIsBYpkT+ehy27NKVcjvwG8pnuyp4H6D33Yfqx7e3t/+0zVHjWavAIogJ9wyB8JszT39wsKjkfw66AJ2wmF9qOEL9Fv31IBAPCHDLTrwYWx9qVO/p8rFkDQhhAgtH9y3X3rTvEZ4JjkjKYdXN549MP8hyTgfr26ZIFTYTsPU08kjZ3rG1dVfIkkKaMtRE2G+aJDuJ9/UtHQzREimHDmgfH5MFYmrc7QDSHXuwuDA++tekK7YLFd6CMe24O3ZH+9hUKEPRMKAMNz+AiF+F1P4C9nxnW8TdvZfeb/tg3eMuEtOV3bOdgH/pFIJHY9CEEP+dgi93v4RAgXltYo7aT/GwDH3yHdkjOX54AHiBzhTdyAtfEm7Ni4ewDjO5jK8zlG+MaI+08ScP20dO/fOjhEgKOjo5N0mfROide/5DSwCUMI3Q94XKme/3C/ucEbN+ID94GExDZDkR7A0RFeYNVbeBP269jo+vr1EPcbwN9ffMv//27kZ1OfBz4j+yO8RY5EoueQO7iLPaPr6PtXXGEBwJfYgB9z/x9g+EofThtzheH4J5Qi4eDpqd8VOPn+/etXuoXbPzon9fbfrt1/Axg+BCTHbPBL5KRPRy4XcH/mH44RUiN/OiPH/U1F3Iu7pwIDEMj++8lXNMEhjKkwM76dqbjn5pf7s/56NQh9Jnw0AED5H+IgWf/z9wZKJvemlvCFzywtGOhigXDkGaDHnqsUcIXR/BPAT264dfyLHGjHWIRCIP/Dr3jRVq8O9pdDR/z53MzxKvoD/0GD19scSQcBAo5/wsc19N5er8OhduSavBCdIfo/uegNKVqkexYFF01jIm1ibz+G04462Wz+hcebAG89DWK3oEkvwuGb9Q7HPTRZuUA4JnRif0G7hVOjyzhAKVJDwf4H3Z5KQMLsv38AAAAASUVORK5CYII=" alt="Logo SecuriTech" width="44" height="44">
+  <div class="wrap">
+    <a class="brand" href="#accueil">
+      <img src="Logo.png" alt="Logo SecuriTech">
       <span>SecuriTech Sénégal<small>Votre sécurité, notre priorité</small></span>
     </a>
-    <nav>
+    <nav aria-label="Navigation principale">
       <a href="#services">Services</a>
       <a href="#tarifs">Tarifs</a>
+      <a href="#methode">Comment ça se passe</a>
       <a href="#pourquoi">Pourquoi nous</a>
       <a href="#boutique">Boutique</a>
       <a href="#contact">Contact</a>
@@ -81,107 +112,144 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem;bord
 </header>
 
 <main id="accueil">
-  <div class="wrap hero">
-    <img class="hero-logo" src="Logo.png" alt="SecuriTech – Votre sécurité, notre priorité" width="320" height="320">
-    <h1>Protégez votre maison et votre entreprise avec <span>SecuriTech</span></h1>
-    <p>Installation de caméras de surveillance, vidéophones, interphones et réseaux informatiques au Sénégal. Un technicien qualifié, du conseil jusqu’à la mise en service.</p>
-    <div class="btns">
-      <a class="btn wa" href="https://wa.me/221763259221?text=Bonjour%20SecuriTech%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">Devis gratuit sur WhatsApp</a>
-      <a class="btn alt" href="#services">Voir nos services</a>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Caméras, interphones et réseaux : installés proprement à Dakar et partout au Sénégal</h1>
+        <p>Un technicien réseau qualifié vous conseille, installe et configure. Réponse rapide sur WhatsApp, devis gratuit.</p>
+        <div class="btns">
+          <a class="btn btn-wa" href="https://wa.me/221763259221?text=Bonjour%20SecuriTech%2C%20je%20souhaite%20un%20devis." rel="noopener">Devis gratuit sur WhatsApp</a>
+          <a class="btn btn-ghost" href="#services">Voir nos services</a>
+        </div>
+      </div>
+      <img src="Logo.png" alt="SecuriTech – Votre sécurité, notre priorité">
     </div>
   </div>
 
   <section id="services">
     <div class="wrap">
       <h2>Nos services</h2>
-      <p class="sub">Tout pour sécuriser et connecter vos locaux.</p>
-      <div class="grid">
-        <div class="card"><div class="ic">📹</div><h3>Caméras IP et analogiques</h3><p>Choix du matériel, pose et configuration de systèmes de vidéosurveillance adaptés à votre budget.</p></div>
-        <div class="card"><div class="ic">📶</div><h3>Caméras sans fil (WiFi)</h3><p>Installation simple et rapide, avec consultation à distance depuis votre téléphone.</p></div>
-        <div class="card"><div class="ic">🔔</div><h3>Vidéophones et interphones</h3><p>Voyez et parlez à vos visiteurs avant d’ouvrir : confort et sécurité pour villas, immeubles et bureaux.</p></div>
-        <div class="card"><div class="ic">🔌</div><h3>Câblage réseau</h3><p>Passage de câbles propre et durable pour vos caméras, bureaux et commerces.</p></div>
-        <div class="card"><div class="ic">📡</div><h3>Points d’accès WiFi</h3><p>Configuration de bornes WiFi pour une couverture stable dans toute votre maison ou entreprise.</p></div>
-        <div class="card"><div class="ic">🛠️</div><h3>Maintenance et dépannage</h3><p>Vérification, réglage et réparation de vos installations existantes.</p></div>
+      <p class="lead">Tout pour sécuriser et connecter vos locaux.</p>
+      <div class="services">
+        <div class="service"><span class="ico" aria-hidden="true">📹</span><div><h3>Caméras IP et analogiques</h3><p>Choix du matériel, pose et configuration d’un système de vidéosurveillance adapté à votre budget.</p></div></div>
+        <div class="service"><span class="ico" aria-hidden="true">📶</span><div><h3>Caméras sans fil (WiFi)</h3><p>Installation simple et rapide, avec consultation à distance depuis votre téléphone.</p></div></div>
+        <div class="service"><span class="ico" aria-hidden="true">🔔</span><div><h3>Vidéophones et interphones</h3><p>Voyez et parlez à vos visiteurs avant d’ouvrir : pour villas, immeubles et bureaux.</p></div></div>
+        <div class="service"><span class="ico" aria-hidden="true">🔌</span><div><h3>Câblage réseau</h3><p>Passage de câbles propre et durable pour vos caméras, bureaux et commerces.</p></div></div>
+        <div class="service"><span class="ico" aria-hidden="true">📡</span><div><h3>Points d’accès WiFi</h3><p>Bornes WiFi configurées pour une couverture stable dans toute votre maison ou entreprise.</p></div></div>
+        <div class="service"><span class="ico" aria-hidden="true">🛠️</span><div><h3>Maintenance et dépannage</h3><p>Vérification, réglage et réparation de vos installations existantes.</p></div></div>
       </div>
     </div>
   </section>
 
-  <section id="tarifs">
+  <section id="tarifs" class="alt">
     <div class="wrap">
       <h2>Nos tarifs</h2>
-      <p class="sub">Prix indicatifs en FCFA. Devis gratuit adapté à votre besoin.</p>
-      <div class="grid">
-        <div class="card price">
+      <p class="lead">Prix indicatifs en FCFA. Le devis est gratuit et adapté à votre besoin.</p>
+      <div class="pricing">
+        <div class="price">
           <h3>Kit 8 caméras Fosvision</h3>
-          <div class="amount">190 000 FCFA</div>
+          <p class="amount">190 000 FCFA</p>
           <ul>
             <li>Kit de 8 caméras : 140 000 FCFA</li>
             <li>Installation et configuration : 50 000 FCFA</li>
           </ul>
+          <a class="btn btn-wa" href="https://wa.me/221763259221?text=Bonjour%20SecuriTech%2C%20je%20veux%20le%20kit%208%20cam%C3%A9ras." rel="noopener">Commander ce kit</a>
         </div>
-        <div class="card price">
+        <div class="price soft">
           <h3>Autres installations</h3>
-          <div class="amount">Sur devis</div>
+          <p class="amount">Sur devis</p>
           <ul>
             <li>Caméras WiFi</li>
             <li>Vidéophones et interphones</li>
             <li>Câblage réseau et points d’accès</li>
           </ul>
+          <a class="btn btn-ghost" style="color:var(--ink);border-color:var(--ink)" href="https://wa.me/221763259221?text=Bonjour%20SecuriTech%2C%20je%20souhaite%20un%20devis." rel="noopener">Demander un devis</a>
         </div>
       </div>
-      <p style="text-align:center;margin-top:24px"><a class="btn wa" href="https://wa.me/221763259221?text=Bonjour%20SecuriTech%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">Demander un devis</a></p>
     </div>
   </section>
 
-  <section id="pourquoi" class="why">
+  <section id="methode">
+    <div class="wrap">
+      <h2>Comment ça se passe</h2>
+      <p class="lead">Quatre étapes, de votre message à la mise en service.</p>
+      <ol class="steps">
+        <li><strong>Vous nous écrivez</strong><span>Un message WhatsApp avec votre besoin et votre quartier.</span></li>
+        <li><strong>Devis détaillé</strong><span>Matériel et main-d’œuvre séparés, sans surprise.</span></li>
+        <li><strong>Installation</strong><span>Pose, câblage et configuration réseau par le technicien.</span></li>
+        <li><strong>Mise en service</strong><span>Test complet et consultation réglée sur votre téléphone.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="pourquoi" class="alt">
     <div class="wrap">
       <h2>Pourquoi choisir SecuriTech ?</h2>
-      <p class="sub">Un service sérieux, du début à la fin.</p>
-      <div class="grid">
-        <div class="card"><h3>✅ Devis clair</h3><p>Matériel et main-d’œuvre détaillés, sans mauvaise surprise.</p></div>
-        <div class="card"><h3>✅ Compétence réseau</h3><p>Une installation bien configurée, pas seulement des caméras posées au mur.</p></div>
-        <div class="card"><h3>✅ Conseils adaptés</h3><p>Nous choisissons avec vous la solution qui correspond à votre besoin réel.</p></div>
+      <p class="lead">Un service sérieux, du début à la fin.</p>
+      <div class="why">
+        <div><h3>✅ Devis détaillé</h3><p>Matériel et main-d’œuvre séparés, sans mauvaise surprise.</p></div>
+        <div><h3>✅ Réseau bien configuré</h3><p>Consultation à distance sur votre téléphone, testée avant notre départ.</p></div>
+        <div><h3>✅ Conseil honnête</h3><p>Nous vous proposons le nombre de caméras dont vous avez réellement besoin.</p></div>
+        <!--
+        À DÉCOMMENTER quand vous avez confirmé vos conditions :
+        <div><h3>✅ Garantie</h3><p>Garantie de ... mois sur l’installation. Garantie constructeur sur le matériel.</p></div>
+        -->
       </div>
     </div>
   </section>
+
+  <!--
+  SECTION RÉALISATIONS : décommentez après avoir ajouté vos photos (dans le même dossier que index.html).
+  <section id="realisations">
+    <div class="wrap">
+      <h2>Nos réalisations</h2>
+      <p class="lead">Quelques installations récentes.</p>
+      <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+        <img src="realisation1.jpg" alt="Installation de caméras – villa à Dakar" loading="lazy">
+        <img src="realisation2.jpg" alt="Câblage réseau – bureau" loading="lazy">
+        <img src="realisation3.jpg" alt="Interphone – immeuble" loading="lazy">
+      </div>
+    </div>
+  </section>
+  -->
 
   <section id="boutique">
     <div class="wrap">
-      <div class="cta">
-        <h2 style="color:#fff">Notre boutique en ligne</h2>
-        <p>Découvrez nos équipements de sécurité et commandez directement depuis notre boutique.</p>
-        <a class="btn" href="https://mvbdhvby.mychariow.co" target="_blank" rel="noopener">Visiter la boutique</a>
-      </div>
+      <h2>Notre boutique en ligne</h2>
+      <p class="lead">Découvrez nos équipements de sécurité et commandez directement depuis notre boutique.</p>
+      <a class="btn btn-wa" href="https://mvbdhvby.mychariow.co" rel="noopener">Visiter la boutique</a>
+    </div>
+  </section>
+
+  <section id="zones" class="alt">
+    <div class="wrap">
+      <h2>Zones d’intervention</h2>
+      <ul class="plain zones">
+        <li><strong>Dakar et banlieue</strong> : Plateau, Almadies, Pikine, Guédiawaye, Rufisque, Keur Massar. Déplacement gratuit pour tout devis.</li>
+        <li><strong>Thiès et Mbour</strong> : Saly, Somone, Joal. Sur devis, frais selon la distance.</li>
+        <li><strong>Autres régions</strong> : Saint-Louis, Kaolack, Touba, Ziguinchor, etc. Sur devis, frais de déplacement selon la distance.</li>
+      </ul>
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap">
       <h2>Contactez-nous</h2>
-      <p class="sub">Réponse rapide pour tout devis ou renseignement.</p>
+      <p class="lead">Réponse rapide pour tout devis ou renseignement.</p>
       <div class="contact">
-        <div class="card"><div class="ic">📞</div><h3>Téléphone</h3><a href="tel:+221763259221">+221 76 325 92 21</a></div>
-        <div class="card"><div class="ic">💬</div><h3>WhatsApp</h3><a href="https://wa.me/221763259221" target="_blank" rel="noopener">Écrire sur WhatsApp</a></div>
-        <div class="card"><div class="ic">📍</div><h3>Zone d’intervention</h3><p>Dakar et environs, selon projet.</p></div>
+        <div><h3>📞 Téléphone</h3><p><a href="tel:+221763259221">+221 76 325 92 21</a></p></div>
+        <div><h3>💬 WhatsApp</h3><p><a href="https://wa.me/221763259221" rel="noopener">Écrire sur WhatsApp</a></p></div>
+        <div><h3>📍 Zone</h3><p>Dakar, Thiès, Mbour et autres régions sur devis.</p></div>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <section id="zones">
-  <h2>Zones d'intervention</h2>
-  <p>Nous intervenons partout au Sénégal.</p>
-  <ul>
-    <li>📍 <strong>Dakar et banlieue</strong> : Plateau, Almadies, Pikine, Guédiawaye, Rufisque, Keur Massar</li>
-    <li>📍 <strong>Thiès et Mbour</strong> : Saly, Somone, Joal</li>
-    <li>📍 <strong>Autres régions</strong> : Saint-Louis, Kaolack, Touba, Ziguinchor, etc. (sur devis)</li>
-  </ul>
-  <p>Déplacement gratuit à Dakar pour tout devis. Hors Dakar, frais de déplacement selon la distance.</p>
-  <a href="https://wa.me/221763259221">Demander un devis sur WhatsApp</a>
-  </section>
   <div class="wrap">© 2026 SecuriTech Sénégal – Votre sécurité, notre priorité.</div>
 </footer>
+
+<a class="float-wa" href="https://wa.me/221763259221?text=Bonjour%20SecuriTech%2C%20je%20souhaite%20un%20devis." rel="noopener" aria-label="Écrire sur WhatsApp">💬 WhatsApp</a>
 
 </body>
 </html>
